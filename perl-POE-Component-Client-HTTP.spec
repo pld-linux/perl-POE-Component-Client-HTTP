@@ -1,6 +1,6 @@
 #
 # Conditional build:
-# _without_tests - do not perform "make test"
+%bcond_without	tests # do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	POE
@@ -17,7 +17,7 @@ Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version
 # Source0-md5:	1f3d5b3793b42715493c6b46057cb75e
 BuildRequires:	perl-devel >= 5.6
 BuildRequires:	rpm-perlprov >= 4.1-13
-%if %{!?_without_tests:1}0
+%if %{with tests}
 BuildRequires:	perl-POE >= 0.11_06
 BuildRequires:	perl-URI >= 1.11
 BuildRequires:	perl-libwww
@@ -43,7 +43,7 @@ pozwala na równoleg³e wykonywanie kilku transakcji HTTP.
 	INSTALLDIRS=vendor
 %{__make}
 
-%{!?_without_tests:%{__make} test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
