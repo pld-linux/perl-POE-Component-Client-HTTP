@@ -4,8 +4,8 @@
 			# require network access
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	POE
-%define	pnam	Component-Client-HTTP
+%define		pdir	POE
+%define		pnam	Component-Client-HTTP
 Summary:	POE::Component::Client::HTTP - a HTTP user-agent component
 Summary(pl):	POE::Component::Client::HTTP - komponent klienta HTTP
 Name:		perl-POE-Component-Client-HTTP
