@@ -1,6 +1,7 @@
 #
 # Conditional build:
-%bcond_without	tests # do not perform "make test"
+%bcond_with	tests	# perform "make test"
+			# require network access
 #
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	POE
@@ -22,6 +23,8 @@ BuildRequires:	perl-POE >= 0.11_06
 BuildRequires:	perl-URI >= 1.11
 BuildRequires:	perl-libwww
 %endif
+Requires:	perl-POE
+Requires:	perl-libwww
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
