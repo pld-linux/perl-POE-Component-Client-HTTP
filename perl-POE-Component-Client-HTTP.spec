@@ -60,7 +60,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc CHANGES* README
-%{perl_vendorlib}/%{pdir}/*/*.pm
-%{perl_vendorlib}/%{pdir}/*/*/*.pm
-%{perl_vendorlib}/%{pdir}/*/*/*/*.pm
+%{perl_vendorlib}/POE/Filter/HTTP*.pm
+%{perl_vendorlib}/POE/Component/Client/HTTP.pm
+%dir %{perl_vendorlib}/POE/Component/Client/HTTP
+%{perl_vendorlib}/POE/Component/Client/HTTP/*.pm
 %{_mandir}/man3/*
