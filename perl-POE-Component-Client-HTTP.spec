@@ -7,7 +7,7 @@
 %define		pdir	POE
 %define		pnam	Component-Client-HTTP
 Summary:	POE::Component::Client::HTTP - a HTTP user-agent component
-Summary(pl):	POE::Component::Client::HTTP - komponent klienta HTTP
+Summary(pl.UTF-8):   POE::Component::Client::HTTP - komponent klienta HTTP
 Name:		perl-POE-Component-Client-HTTP
 Version:	0.79
 Release:	1
@@ -33,10 +33,10 @@ POE::Component::Client::HTTP is an HTTP user-agent for POE.  It lets
 other sessions run while HTTP transactions are being processed, and it
 lets several HTTP transactions be processed in parallel.
 
-%description -l pl
+%description -l pl.UTF-8
 POE::Component::Client::HTTP to klient HTTP dla POE. Pozwala na
-dzia≥anie innych sesji podczas wykonywania transakcji HTTP, a takøe
-pozwala na rÛwnoleg≥e wykonywanie kilku transakcji HTTP.
+dzia≈Çanie innych sesji podczas wykonywania transakcji HTTP, a tak≈ºe
+pozwala na r√≥wnoleg≈Çe wykonywanie kilku transakcji HTTP.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
