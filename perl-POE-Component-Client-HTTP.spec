@@ -9,13 +9,13 @@
 Summary:	POE::Component::Client::HTTP - a HTTP user-agent component
 Summary(pl.UTF-8):	POE::Component::Client::HTTP - komponent klienta HTTP
 Name:		perl-POE-Component-Client-HTTP
-Version:	0.79
+Version:	0.82
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	f873ef9a39958c6b5389e8e48577e9e2
+# Source0-md5:	482f91b91de6d21c9072d69ffb6026cc
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
@@ -24,6 +24,7 @@ BuildRequires:	perl-URI >= 1.24
 BuildRequires:	perl-libwww
 %endif
 Requires:	perl-POE >= 1:0.3202
+Requires:	perl-POE-Component-Client-Keepalive
 Requires:	perl-libwww
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
