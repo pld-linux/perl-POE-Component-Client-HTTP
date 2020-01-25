@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_with	tests	# perform "make test" (requires network access)
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	POE
 %define		pnam	Component-Client-HTTP
 Summary:	POE::Component::Client::HTTP - a HTTP user-agent component
